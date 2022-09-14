@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿double d1=3;
+double d2=30;
+Console.WriteLine(d1/d2);
