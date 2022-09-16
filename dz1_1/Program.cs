@@ -6,9 +6,13 @@ if(ch1>ch2)
 {
     Console.Write("Больше число ");
     Console.WriteLine(ch1);
-}
+    Console.Write("Меньшее число ");
+    Console.WriteLine(ch2);
+    }
 else
 {
     Console.Write("Больше число ");
     Console.WriteLine(ch2);
+    Console.Write("Меньшее число ");
+    Console.WriteLine(ch1);
 }
