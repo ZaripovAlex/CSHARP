@@ -1,33 +1,52 @@
-Console.Clear;
-int[] array = new int[10];
-void FillArray(int[] col)
+﻿void FillArray(int[] collection)
 {
-    int n= col.Length;
-    int i=0;
-    while (i<n)
+    int length = collection.Length;
+    int index = 0;
+    while (index < length)
     {
-        col[i]=new Random().Next(1,10);
-        i++;
+        collection[index] = new Random().Next(1, 10);
+        //index = index + 1;
+        index++;
     }
 }
-void PrintArray(int[] arr)
+
+void PrintArray(int[] col)
 {
-    int n = arr.Length;
-    int i =0;
-    while (i<n)
+    int count = col.Length;
+    int position = 0;
+    while (position < count)
     {
-        Console.WriteLine(arr[i]);
+        Console.WriteLine(col[position]);
+        position++;
     }
 }
-int[] IndexOf(int[] arr, int f)
+
+int IndexOf(int[] collection, int find)
 {
-    int n=arr.Length;
-    int i=0;
-    while(i<n)
+    int count = collection.Length;
+    int index = 0;
+    int position = -1;
+    while (index < count)
     {
-        if(arr[i]==f)
+        if (collection[index] == find)
         {
-            int pos = i;
+            position = index;
             break;
         }
-        
+        index++;
+    }
+    return position;
+}
+
+int[] array = new int[10];
+
+FillArray(array);
+array[4] = 4;
+array[6] = 4;
+
+PrintArray(array);
+Console.WriteLine();
+
+int pos = IndexOf(array, 444);
+Console.WriteLine(pos);
+
