@@ -1,17 +1,22 @@
-﻿//Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-//645 -> 5
-//78 -> третьей цифры нет
-//32679 -> 6
-
-Console.Write("Введите число ");
-int num = Int32.Parse(Console.ReadLine());
+﻿Console.Write("Введите число ");
+int num = Convert.ToInt32(Console.ReadLine());
 int num1=0;
 if (num<100) 
 {
    Console.WriteLine("Третьего числа нет");
 }
-else 
+else if ((num>100) && (num<1000))
 {
     num1=num%10;
-    Console.Write($"Третье число - {num1}");
+    Console.WriteLine(num1);
 }
+else
+{
+   while (num>1000)
+    {
+        num=num/10;
+    }
+     Console.WriteLine(num%10);
+   
+}
+    
