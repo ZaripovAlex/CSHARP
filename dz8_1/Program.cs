@@ -45,25 +45,6 @@ void PrintMatrix(int[,] arr)
     }
     Console.WriteLine();
 }
-void SearchMaxPosition(int[,] array, int s, int z)
-{
-    int max = array[s, z];
-    for (int i = z; i < array.GetLength(1); i++)
-    {
-
-        {
-            if (array[s, i] > max)
-            {
-                max = array[s, i];
-                maxi = i;
-                maxj=s;
-            }
-        }
-        
-    }
-    Console.WriteLine($"max = {max}, maxi = {maxi}, minj= {s}");
-    //return max;
-}
 
 void SortArray(int[,]array)
 {
